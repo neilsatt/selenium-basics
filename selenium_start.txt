@@ -1,0 +1,25 @@
+npm install selenium-webdriver@3
+npm install chromedriver -g
+
+node 
+> 
+
+const selenium = require("selenium-webdriver");
+const driver = new selenium.Builder().forBrowser("chrome").build();
+const url = "http://port-80-m4qtmkkgh6.treehouse-app.com/"
+driver.get(url);
+
+
+const By = selenium.By;
+const field = driver.findElement(By.xpath("/html/body/div/header/form/input"));
+field.sendKeys("Found it");
+
+
+
+
+
+
+
+
+
+/html/body/div/header/form/input
