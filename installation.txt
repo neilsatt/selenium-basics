@@ -1,3 +1,7 @@
 npm install selenium-webdriver@3
 
 Chrome Driver - https://www.youtube.com/watch?v=dz59GsdvUF8
+
+
+Chrome Browser closing immediately after running command
+
