@@ -1,5 +1,6 @@
 
-const By = require("selenium-webdriver").By;
+const selenium = require("selenium-webdriver");
+const By = selenium.By;
 
 const HomePage = require('./pages/home');
 
@@ -43,23 +44,14 @@ const invitees = [
 
 
 
-function addInvitee(name){
-        driver.findElement(locators.inviteeForm)
-        .sendKeys(name);
-        driver.findElement(locators.inviteeForm).submit();
-};
 
-function toggleNonRespondersVisibility() {
-        driver.findElement(locators.toggleNonRespondersVisibility)
-                .click();
-}
 
-invitees.forEach(addInvitee);
+invitees.forEach(homePage.addInvitee, homePage);
 
-addInvitee('John Fods');
-addInvitee('Ted Gois');
+homePage.removeInvitee('John Fods');
 
-toggleNonRespondersVisibility();
+
+homePage.toggleNonRespondersVisibility();
 /* 
  Command to run in terminal
  URL=http://port-80-m4qtmkkgh6.treehouse-app.com/ node index.js
