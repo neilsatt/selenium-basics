@@ -56,12 +56,12 @@ homePage
     .toggleConfirmation();
 
 driver.takeScreenshot().then((image, err) => {
-    fs.writeFile("weird-layout.png", image, "base64",
+    fs.writeFile("selenium-layout.png", image, "base64",
         err => console.error(err));
 
 });
 
-homePage.toggleNonRespondersVisibility();
+//homePage.toggleNonRespondersVisibility();
 /* 
  Command to run in terminal
  URL=http://port-80-m4qtmkkgh6.treehouse-app.com/ node index.js

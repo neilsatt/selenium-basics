@@ -65,6 +65,7 @@ class Invitee {
             .click();
 
     }
+
 }
 
 module.exports = HomePage;
